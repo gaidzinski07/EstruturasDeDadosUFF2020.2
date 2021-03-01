@@ -58,6 +58,20 @@ int cmp_int(const void *vx, const void *vy){
    return 0;
 }
 
+TAB* copiaAux(TAB* no){
+    return NULL;
+}
+
+TAB* copia(TAB *a){
+  TAB *cpy = NULL;
+  if(a){
+    printf("%d", a->info);
+    cpy->esq = copia(a->esq);
+  }
+  printf("NULO");
+  return NULL;
+}
+
 int main(void){
   while(1){
     int n;
@@ -71,6 +85,7 @@ int main(void){
     printf("\n");
     imp_sim(a);
     printf("\n");
+    copia(a);
     libera(a);
   }
 }

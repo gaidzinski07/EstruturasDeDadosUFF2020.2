@@ -67,5 +67,5 @@ TABB* TABB_retira(int e, TABB *t){
       t->esq = TABB_retira(e, t->esq);
     }
   }
-  return t;  
+  return t;
 }
