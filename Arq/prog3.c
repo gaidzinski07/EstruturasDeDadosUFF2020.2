@@ -2,7 +2,7 @@
 #define STRING_MAX_SIZE 100
 #define PWD "MyPassword"
 
-char *crypt(char * s, char * password){
+char *crypt(char * s, char *pwd){
     return s;
 }
 int main(){
