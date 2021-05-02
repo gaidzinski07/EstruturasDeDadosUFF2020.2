@@ -3,19 +3,19 @@
 #include "TLSE.h"
 
 
-TLSE* div_k_aux(TARVB* a, int k, TLSE* n){
+TLSE* div_k_aux(TARVB* a, int k, TLSE* lista){
     if(!a){
-        return n;
+        return lista;
     }
     int i = 0;
     for(i=0; i < a->nchaves; i++){
         if(k % a->chave[i] == 0 && a->chave[i] != k){
-            n = TLSE_insere(n, a->chave[i]);
+            lista = TLSE_insere(lista, a->chave[i]);
         }
-        n = div_k_aux(a->filho[i], k, n);
+        lista = div_k_aux(a->filho[i], k, lista);
     }
-    n = div_k_aux(a->filho[a->nchaves], k, n);
-    return n;
+    lista = div_k_aux(a->filho[a->nchaves], k, lista);
+    return lista;
 }
 
 int cmpfunc (int * a, int * b) {
