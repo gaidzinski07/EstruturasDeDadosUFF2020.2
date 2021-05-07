@@ -12,7 +12,6 @@ TARVBM *TARVBM_cria(int t){
   return novo;
 }
 
-
 TARVBM *TARVBM_inicializa(void){
   return NULL;
 }
@@ -39,7 +38,6 @@ TARVBM *TARVBM_busca(TARVBM *a, int mat){
   return TARVBM_busca(a->filho[i], mat);
 }
 
-
 void TARVBM_imprime_chaves(TARVBM *a){
   if(!a) return;
   TARVBM *p = a;
@@ -51,7 +49,6 @@ void TARVBM_imprime_chaves(TARVBM *a){
   }
   printf("\n");
 }
-
 
 void imp(TARVBM *a, int andar){
   if(a){
@@ -96,7 +93,6 @@ TARVBM *divisao(TARVBM *x, int i, TARVBM* y, int t){
   return x;
 }
 
-
 TARVBM *insere_nao_completo(TARVBM *x, int mat, int t){
   int i = x->nchaves-1;
   if(x->folha){
@@ -138,7 +134,6 @@ TARVBM *TARVBM_insere(TARVBM *T, int mat, int t){
   T = insere_nao_completo(T, mat, t);
   return T;
 }
-
 
 TARVBM* remover(TARVBM* arv, int ch, int t){
   if(!arv) return arv;
@@ -290,7 +285,6 @@ TARVBM* remover(TARVBM* arv, int ch, int t){
   arv->filho[i] = remover(arv->filho[i], ch, t);
   return arv;
 }
-
 
 TARVBM* TARVBM_retira(TARVBM* arv, int k, int t){
   if(!arv || !TARVBM_busca(arv, k)) return arv;
